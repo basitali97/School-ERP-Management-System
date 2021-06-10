@@ -1,0 +1,108 @@
+ul{
+    list-style-type: none;
+}
+
+.month{
+    padding: 70px 25px;
+    width: 100%;
+    background: rgb(224, 118, 40);
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li{
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.prev,.next:hover{
+    cursor: pointer;
+}
+.month .prev{
+    float: left;
+    font-size: 1.5rem;
+    padding-top : 10px;
+    font-weight: 400;
+}
+
+.month .next{
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.weekDays{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #eee;
+}
+
+.weekDays li{
+    display: inline-block;
+    color: #000;
+    text-align: center;
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.1rem;
+    flex-wrap: wrap;
+    background: #ddd;
+    color: #000;
+}
+.days div{
+    font-size: 1.2rem;
+    margin: 0.2rem;
+    width: 13.2%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+.days div:hover:not(.today){
+    background: #858484;
+    border: 0.2rem solid rgb(197, 191, 191);
+    cursor: pointer;
+    color: #fff;
+}
+.prev-date,
+.next-date{
+    opacity: 0.2;
+}
+.today{
+    background: rgb(224, 118, 40);
+    color: #fff;
+}
+
+@media screen and (max-width: 1370px) {
+    .days div{
+        width: 11.5%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .days div{
+        width: 13.1%;
+    }
+}
+@media screen and (max-width: 630px) {
+    .days div{
+        width: 11.7%;
+    }
+}
